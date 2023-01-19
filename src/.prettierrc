@@ -2,5 +2,5 @@
   "tabWidth": 2,
   "useTabs": false,
   "trailingComma": "all",
-  "parser": "do not use prettier in this project"
+  "parser": "do not use prettier"
 }

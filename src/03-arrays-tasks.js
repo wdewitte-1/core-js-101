@@ -450,7 +450,6 @@ function sortCitiesArray(arr) {
  *           [0,0,0,0,1]]
  */
 function getIdentityMatrix(n) {
-  /* prettier-ignore */
   return [...Array(n)].map((e, index, arr) => arr.map((e2, index2) => (index === index2 ? 1 : 0)));
 }
 
