@@ -450,8 +450,24 @@ function sortCitiesArray(arr) {
  *           [0,0,0,0,1]]
  */
 function getIdentityMatrix(n) {
-  return [...Array(n)].map((e, index, arr) => arr.map((e2, index2) => (index === index2 ? 1 : 0)));
+  return Array.from(
+    { length: n },
+    (_, i) =>
+      // eslint-disable-next-line implicit-arrow-linebreak, no-shadow
+      Array.from({ length: n }, (_, j) => (i === j ? 1 : 0)),
+    // eslint-disable-next-line function-paren-newline
+  );
 }
+
+/*
+return Array.from({ length: n }, (_, i) =>
+    Array.from({ length: n }, (z, j) => (i === j ? 1 : 0)),
+  );
+
+  return [...Array(n)].map((e, index, arr) => {
+    arr.map((e2, index2) => (index === index2 ? 1 : 0));
+  });
+  */
 
 /**
  * Creates an array of integers from the specified start to end (inclusive)
